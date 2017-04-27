@@ -97,13 +97,6 @@ the vehicle is not in use. The communication that Uniti requires for this is
 much more time critical as input from a mobile device will affect the vehicle in
 very close to real time.
 
-We have read some articles\cite{NIST_report} concerning more general
-internet security on both the link layer and application layer and
-they have broght up som interesting points concerning different holes
-in security. Alot of research have lately concerned preventing 
-DoS (Denial-of-Service) attacks while there also has been always been a
-steady research into the security holes that wireless networks give rise to. 
-
 
 \section{Project aims and challenges}
 %The aim with this Master’s thesis work is to… To find a feasible solution to
@@ -133,10 +126,11 @@ we will initially work with to build upon.
 \section{Previous work}
 %Back-ground knowledge and experiences can be found among the professors and PhD
 %students at the department…
-Earlier work has been put into this field both on university level and at the
-company Uniti itself. Most of the work on Uniti's end have however been
-performed by people who are not dedicated to that specific area.
-These implementations did however not meet all the needs of their systems.
+
+We have read an article \cite{NIST_report} concerning more general
+internet security on both the link layer and application layer and
+it have broght up some interesting points concerning both security and stability.
+Mostly concerning what aspects you have to consider when specifying a network group.
 
 According to Giuseppe's analysis of IEEE 802.11 performance
 \cite{PAIEEE_article}, the performance is, not very suprisingly, affected by the
@@ -144,6 +138,11 @@ number of units on the network. This will be an issue during showcasing of
 Uniti's vehicle as low latency is a requirement for safe remote operation of the
 vehicle as during showcasing the network will most likely be heavily populated
 by devices.
+
+These articles went into some detail about the 802.11 standard for Wifi.
+We intend to start our thesis project by testing to use 802.11 for our 
+wireless communication setup.
+
 
 
 \section{Advancements and Outcome}
