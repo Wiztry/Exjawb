@@ -72,48 +72,63 @@
 
 \section{Introduction}
 %Technology advancement in…
+%Borde vara mer fokus på att informationsöverföring via trådlösa medier
+%Fokus på stabilitet om något, onödigt att diskutera säkerhet för mycket ifall vi inte ska gå in på det.
 The need for secure and stable connections via wireless interfaces has become
-more and more relevant today.  Users in a system should be able to trust a
+more and more relevant today. Users in a system should be able to trust a
 connections stability and security. By extension companies that supply services
 that depend on wireless connectivity should be able to guarantee stability
 and security in their connections.
 
+When transmitting important data over a wireless connection it is important that all the data arrives and in a timely manner. The medias used in a network should meet all the requirements which the user imposes upon it. A dependency should be enforced upon all the components in a network to ensure the stability of the entire network.
+
+%De här bitarna bör snarare vara i introduktionen
+%Wireless communication is allready used in the car industry today, and is used
+%för (among other things) updating allready existing software on platforms
+%allready in use. This is to ensure that bugs and security flaws in older models
+%gets patched out as they are discovered.
+
+%This communication is however not time critical as updates are performed when
+%the vehicle is not in use. The communication that Uniti requires for this is
+%much more time critical as input from a mobile device will affect the vehicle in
+%very close to real time.
 
 \section{Backgound and motivation}
 %Recent research in this area…
+%Bakgrunden borde vara mer en bakgrund till vårt exjobbs utförande....
+Uniti is a new company that is producing an electric vehicle that can be
+controlled remotely. For this purpose Uniti has expressed the need for a stable and wireless communication link between their vehicle and peripheral devices, such as a tablet or laptop.
 
-Uniti is a rather new company that is producing an electric vehicle that can be
-controlled remotely. For this purpose Uniti has expressed the need for a stable
-and secure communication between their vehicle and mobile devices, such as a
-tablet or laptop computer.
+In our thesis work we will supply Uniti with a wireless solution to their system.
 
-Wireless communication is allready used in the car industry today, and is used
-för (among other things) updating allready existing software on platforms
-allready in use. This is to ensure that bugs and security flaws in older models
-gets patched out as they are discovered.
 
-This communication is however not time critical as updates are performed when
-the vehicle is not in use. The communication that Uniti requires for this is
-much more time critical as input from a mobile device will affect the vehicle in
-very close to real time.
 
 
 \section{Project aims and challenges}
 %The aim with this Master’s thesis work is to… To find a feasible solution to
 %these questions is challenging…
-
+%Det borde vara mer direkt på vad vi ska göra här och vad vill vi uppnå
+%Vilka mål det finns att uppnå och dess begränsningar.
 The aim with this Master's thesis work is to research and implement a stable and
-secure connection between Uniti's car and mobile devices such as a telephone or
+secure connection between Uniti's car and peripheral devices such as a telephone or
 laptop via wireless connection on networks.
 
-The problems lies in ensuring that the connection remains stable on
-networks that are under heavy load while not contributing too much to the
-latency of the connection. Setting up the connection and making it secure 
-is also of great concern but our aim within this project has its focus 
-set on ensuring low latency and stability between units.
+This connection should be able act with an acceptable latency and with a minimal rate of packet-loss.
+
+The goal within this work is to research and conclude what the best media (4G, Wifi etc.) and the best format (network protocol etc.)
+
+
+
+%The problems lies in ensuring that the connection remains stable on
+%networks that are under heavy load while not contributing too much to the
+%latency of the connection. Setting up the connection and making it secure 
+%is also of great concern but our aim within this project has its focus 
+%set on ensuring low latency and stability between units.
 
 \section{Approach and methodology}
 %The thesis project will be based on…
+%Hur ska vi göra exjobbet och i vilka steg tar vi det?
+%Detta borde snarare handla om hur vi först gör detta och sedan gör detta.
 The thesis project will be based on the requirements set by the different parts
 of the company Uniti's infrastructural software. This software is based
 partially in their car which uses Robot Operating System (ROS) but also in
@@ -126,7 +141,9 @@ we will initially work with to build upon.
 \section{Previous work}
 %Back-ground knowledge and experiences can be found among the professors and PhD
 %students at the department…
-
+%Tidigare arbete inom området ska mer röra information vi behöver utifrån för att göra vårt exjobb
+%Detta är det sista man skriver i rapporten och man behöver nog inte läsa artiklar djupare än att veta vad man kan ta ifrån dem.
+%Det är här t.ex. jävligt orimligt att använda Wi-Fi för att tänk på vad som händer när man kör ifrån en accesspunkt
 We have read an article \cite{NIST_report} concerning more general
 internet security on both the link layer and application layer and
 it have broght up some interesting points concerning both security and stability.
@@ -148,6 +165,7 @@ wireless communication setup.
 \section{Advancements and Outcome}
 %Verification of the theoretical knowledge will be shown by real-world
 %experiments… A scientific conference paper can be expected…
+%Vad har vi åstadkommit i vårt arbete, vad är det tekniska eller forskningsrelaterade vi har tagit fram som inte tidigare fanns?
 The theoretical knowledge used within this project will be rather easy
 to verify the success of, seeing as the implementation of the different 
 protocols and integration with different wireless medias will provide
@@ -159,6 +177,7 @@ experiments to verify.
 \section{Resources}
 %PC or Linux based workstations, placed in thesis workers rooms, will be
 %available for simulation and implementation.
+%Vilka resurser finns tillgängliga till oss när vi gör vårt exjobb.
 We will work with our thesis at Uniti's office in Lund where Uniti will provide
 office space, workspace, and workstations. Uniti will also provide access to
 their test platform and their prototype car, with potential access to extra
