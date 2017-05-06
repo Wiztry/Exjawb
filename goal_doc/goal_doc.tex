@@ -77,11 +77,13 @@
 %Fokus på stabilitet om något, onödigt att diskutera säkerhet för mycket ifall
 %vi inte ska gå in på det.
 
-The need for secure and stable connections via wireless interfaces has become
-more and more relevant today. Users in a system should be able to trust a
-connections stability and security. By extension companies that supply services
-that depend on wireless connectivity should be able to guarantee stability
-and security in their connections.
+%% 
+
+%The need for secure and stable connection via wireless interfaces has become
+%more and more relevant today. Users in a system should be able to trust a
+%connections stability and security. By extension companies that supply services
+%that depend on wireless connectivity should be able to guarantee stability
+%and security in their connections.
 
 When transmitting important data over a wireless connection it is important that
 the data arrives in a timely manner. The medias used in a network should meet
@@ -117,14 +119,14 @@ suffers from package-loss, errors, or duplication. This is fine for some
 applications such as media streaming, real-time multiplayer games, and such
 where package-loss is not critical.
 
-Here you could argue that TCP would be a better alternative as it is a
-connection-oriented protocol that provides reliable, ordered, and error-checked
-delivery of packages between applications, and once a connections is set up data
-can be sent bi-directionally. However, this may not be the case, as TCP-based
-applications may have to wait for retransmission of lost packages. This is not
-ideal as packages containing brake-commands might be lost and needs to be
-retransmitted before the vehicle actyually brakes. This could be the difference
-between stopping safely and crashing into people.
+Using TCP will provide ordered and error-checked delivery of data, however, the
+application might have to wait for retransmission of packages. This approach is
+not ideal as latency might cause issues when controlling the vehicle.
+
+Furthermore, the media over which the communication is transmitted needs to be
+taken into consideration. Depending on the location, WiFi might not be
+available or stable enough. In such cases, could 4G be used instead? Or is 4G
+reliable enough to be used exclusively for this purpose?
 
 \section{Project aims and challenges}
 %The aim with this Master’s thesis work is to… To find a feasible solution to
@@ -133,9 +135,14 @@ between stopping safely and crashing into people.
 %Det borde vara mer direkt på vad vi ska göra här och vad vill vi uppnå
 %Vilka mål det finns att uppnå och dess begränsningar.
 
-The goal of this thesis is to evaluate different mediums of wireless network transmission to and from a unit in motion. This includes implementing a wireless connection between the unit and different peripheral devices. This work involves certain research into different network protocols and wireless technologies such as 4G or WiFi.
+The goal of this thesis is to evaluate different mediums of wireless network
+transmission to and from a unit in motion. This includes implementing a wireless
+connection between the unit and different peripheral devices. This work involves
+certain research into different network protocols and wireless technologies such
+as 4G or WiFi.
 
-The focus of the work will be to find a solution which results in a long range transmission with minimal latency and a minimal rate of packet-loss
+The focus of the work will be to find a solution which results in a long range
+transmission with minimal latency and a minimal rate of packet-loss.
 
 %The aim with this Master's thesis work is to research and implement a stable
 %connection between Uniti's car and peripheral devices such as a telephone or
@@ -160,13 +167,21 @@ The focus of the work will be to find a solution which results in a long range t
 
 %Detta borde snarare handla om hur vi först gör detta och sedan gör detta.
 
-The majority of our thesis project will be put into implementing a wireless connection between uniti's vehicle and a test plattform which will help us evaluate our thesis.
+The majority of our thesis project will be put into implementing a wireless
+connection between Uniti's vehicle and a test platform which will help us
+evaluate our thesis.
 
-The first part of our thesis project will be put into implementing a connection with the plattform which their vehicle uses (Robot operating system), which will be implemented through the protocol rosbridge.
+The first part of our thesis project will be put into implementing a connection
+with the platform which their vehicle uses (Robot operating system), which will
+be implemented through the use of the package rosbridge.
 
-Beyond this we will be able to implement a connection from the vehicle to a test plattform through more conventional means.
+Beyond this we will be able to implement a connection from the vehicle to a test
+platform through more conventional means.
 
-Finally we will be able to substitute the factors in our connection from the vehicle to the test plattform with different mediums and protocols to test our thesis and in that achieve the goal we set.
+Finally we will be able to substitute the different factors in our connection,
+such as medium and protocol, from the vehicle to the test platform with
+different mediums and protocols to test our thesis and in that achieve the goal
+we set.
 
 %The thesis project will be based on the requirements set by the different parts
 %of the company Uniti's infrastructural software. This software is based
