@@ -94,7 +94,7 @@ entire network.
 %% De här bitarna bör snarare vara i introduktionen
 
 %Wireless communication is allready used in the car industry today, and is used
-%för (among other things) updating allready existing software on platforms
+%for (among other things) updating allready existing software on platforms
 %allready in use. This is to ensure that bugs and security flaws in older models
 %gets patched out as they are discovered.
 
@@ -126,7 +126,8 @@ not ideal as latency might cause issues when controlling the vehicle.
 Furthermore, the media over which the communication is transmitted needs to be
 taken into consideration. Depending on the location, WiFi might not be
 available or stable enough. In such cases, could 4G be used instead? Or is 4G
-reliable enough to be used exclusively for this purpose?
+reliable enough to be used exclusively for this purpose? Reliable is in this
+case refering to low latency and low package loss.
 
 \section{Project aims and challenges}
 %The aim with this Master’s thesis work is to… To find a feasible solution to
@@ -202,22 +203,22 @@ we set.
 %Det är här t.ex. orimligt att använda Wi-Fi för att tänk på vad som händer när
 %man kör ifrån en accesspunkt
 
-We have read an article \cite{NIST_report} concerning more general
-internet security on both the link layer and application layer and
-it have broght up some interesting points concerning both security and
-stability. Mostly concerning what aspects you have to consider when specifying a
-network group.
+%We have read an article \cite{NIST_report} concerning more general
+%internet security on both the link layer and application layer and
+%it have broght up some interesting points concerning both security and
+%stability. Mostly concerning what aspects you have to consider when specifying a
+%network group.
 
-According to Giuseppe's analysis of IEEE 802.11 performance
-\cite{PAIEEE_article}, the performance is, not very suprisingly, affected by the
-number of units on the network. This will be an issue during showcasing of
-Uniti's vehicle as low latency is a requirement for safe remote operation of the
-vehicle as during showcasing the network will most likely be heavily populated
-by devices.
+%According to Giuseppe's analysis of IEEE 802.11 performance
+%\cite{PAIEEE_article}, the performance is, not very suprisingly, affected by the
+%number of units on the network. This will be an issue during showcasing of
+%Uniti's vehicle as low latency is a requirement for safe remote operation of the
+%vehicle as during showcasing the network will most likely be heavily populated
+%by devices.
 
-These articles went into some detail about the 802.11 standard for Wifi.
-We intend to start our thesis project by testing to use 802.11 for our 
-wireless communication setup.
+%These articles went into some detail about the 802.11 standard for Wifi.
+%We intend to start our thesis project by testing to use 802.11 for our 
+%wireless communication setup.
 
 
 \section{Advancements and Outcome}
@@ -228,13 +229,13 @@ wireless communication setup.
 %forskningsrelaterade vi har tagit fram som inte tidigare fanns?
 
 
-% --- UTKAST FÖR ADVANCEMENTS AND OUTCOME --- %
+% --- DRAFT FOR ADVANCEMENTS AND OUTCOME --- %
 
 The outcome from this thesis work is made up of two parts, one practical and one
 theoretical.
 
 The practical part consists of the connection implementation between Uniti's
-vehcle and the peripheral devices that will be based on the theoretical
+vehicle and the peripheral devices that will be based on the theoretical
 findings.
 
 The theoretical part consists of the test-results from the different
@@ -243,8 +244,7 @@ devices. The knowledge obtained from these tests could be used as a basis for
 decisions regarding implementation of wireless application and which protocol
 and connection media that should be used.
 
-% ---------------- END UTKAST --------------- %
-
+% ---------------- END DRAFT --------------- %
 
 The theoretical knowledge used within this project will be rather easy
 to verify the success of, seeing as the implementation of the different 
@@ -255,7 +255,7 @@ or not it is stable under heavy loads, as these things require larger
 experiments to verify.
 
 \section{Resources}
-%PC or Linux based workstations, placed in thesis workers rooms, will be
+%Linux based workstations, placed in thesis workers rooms, will be
 %available for simulation and implementation.
 
 %Vilka resurser finns tillgängliga till oss när vi gör vårt exjobb.
