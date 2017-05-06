@@ -111,10 +111,20 @@ controlled remotely. For this purpose Uniti has expressed the need for a stable
 wireless communication link between their vehicle and peripheral devices, such
 as a tablet or laptop.
 
+Today Uniti uses a UDP stream for communication between the vehicle and
+peripheral devices, this is not realy ideal as UDP-applications most likely
+suffers from package-loss, errors, or duplication. This is fine for some
+applications such as media streaming, real-time multiplayer games, and such
+where package-loss is not critical.
 
-
-In our thesis work we will supply Uniti with a wireless solution to their
-system.
+Here you could argue that TCP would be a better alternative as it is a
+connection-oriented protocol that provides reliable, ordered, and error-checked
+delivery of packages between applications, and once a connections is set up data
+can be sent bi-directionally. However, this may not be the case, as TCP-based
+applications may have to wait for retransmission of lost packages. This is not
+ideal as packages containing brake-commands might be lost and needs to be
+retransmitted before the vehicle actyually brakes. This could be the difference
+between stopping safely and crashing into people.
 
 \section{Project aims and challenges}
 %The aim with this Master’s thesis work is to… To find a feasible solution to
