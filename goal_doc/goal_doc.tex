@@ -108,27 +108,35 @@ entire network.
 
 %Bakgrunden borde vara mer en bakgrund till vårt exjobbs utförande...
 
-Uniti is a new company that is producing an electric vehicle that can be
-controlled remotely. For this purpose Uniti has expressed the need for a stable
-wireless communication link between their vehicle and peripheral devices, such
-as a tablet or laptop.
+%Uniti is a new company that is developing an electric vehicle which is supposed to drive autonomously. 
+%For this purpose Uniti has expressed the need for a stable
+%wireless communication link between their vehicle and peripheral devices, such
+%as a tablet or laptop.
+
+Uniti is a newly founded company that is developing an electric vehicle which will be driven autonomously.
+In a couple of months Uniti will showcase their advancements in their development,
+by hosting a demostrational event with their car in front of thousands of participants.
+During this event the development of their car is not supposed to be finished, 
+but rather supposed to be far along enough to showcase its electric-only propulsion and autonomous features. 
 
 Today Uniti uses a UDP stream for communication between the vehicle and
-peripheral devices, this is not realy ideal as UDP-applications most likely
-suffers from package-loss, errors, or duplication. This is fine for some
-applications such as media streaming, real-time multiplayer games, and such
-where package-loss is not critical.
+peripheral devices, this is not really ideal as UDP-applications most likely
+suffer from package-loss, errors, or duplication. This is fine for some
+applications but for some applications it could be critical to miss out on certain information.
 
-Using TCP will provide ordered and error-checked delivery of data, however, the
-application might have to wait for retransmission of packages. This approach is
-not ideal as latency might cause issues when controlling the vehicle.
+Uniti has expressed the need for a better solution for communicating with the vehicle.
+This solution is supposed to let the vehicle be both monitored and in worst case controlled via outside devices.
 
-Furthermore, the media over which the communication is transmitted needs to be
-taken into consideration. Depending on the location, WiFi might not be
-available or stable enough. In such cases, could 4G be used instead? Or is 4G
-reliable enough to be used exclusively for this purpose? Reliable is in this
-case refering to low latency and low package loss.
+%Using TCP will provide ordered and error-checked delivery of data, however, the
+%application might have to wait for retransmission of packages. This approach is
+%not ideal as latency might cause issues when controlling the vehicle.
 
+%Furthermore, the media over which the communication is transmitted needs to be
+%taken into consideration. Depending on the location, WiFi might not be
+%available or stable enough. In such cases, could 4G be used instead? Or is 4G
+%reliable enough to be used exclusively for this purpose? Reliable is in this
+%case refering to low latency and low package loss.
+%
 \section{Project aims and challenges}
 %The aim with this Master’s thesis work is to… To find a feasible solution to
 %these questions are challenging…
