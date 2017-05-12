@@ -1,0 +1,5 @@
+item,desc,source,pros,cons,comment,link,doc
+TOBY L210,4G and LTE module,ublox,,,"This seems like a solid choice, unless I've missed something.",https://www.u-blox.com/en/product/toby-l2-series,https://www.u-blox.com/en/product-resources?f[0]=property_file_product_filter%3A2451
+EVK-L2x,,ublox,,,M-center for windows följer med,https://www.u-blox.com/en/product/evk-l2x,
+M-center,,ublox,comes with EVK-L2x,Only wintendo,Not sure we actually need this.,https://www.u-blox.com/en/product/m-center,https://www.u-blox.com/en/product-resources?f[0]=property_file_product_filter%3A2473
+EMMY W163-A,,ublox,,,,,
