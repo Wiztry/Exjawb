@@ -144,11 +144,20 @@ This solution is supposed to let the vehicle be both monitored and in worst case
 %Det borde vara mer direkt på vad vi ska göra här och vad vill vi uppnå
 %Vilka mål det finns att uppnå och dess begränsningar.
 
-The goal of the thesis will is to evaluate a couple of different mediums of wireless network transmission to and from Uniti's vehicle, as well as evaluating a couple of different protocols for sending both video data and more discrete signals as in Start or Stop.
+The goal of the thesis is to evaluate a couple of different mediums of wireless
+network transmission to and from Uniti's vehicle, as well as evaluating a couple
+of different protocols for sending both video data and more discrete signals as
+in Start or Stop.
 
-For our thesis we will be investigating the compatibility of setting up this connection both with 4G and WiFi Transmission. Furthermore we will also look into implementing both RTP and MMT for sending video data.
+For our thesis we will be investigating the compatibility of setting up this
+connection both with 4G and WiFi Transmission. Furthermore we will also look
+into implementing both Real-time Transport Protocol (RTP) and MPEG media
+transport (MMT) for sending video data.
 
-Uniti has in turn set the requirements on our solution that it is supposed to work in an environment with at least 10000 people. Our transmission of discrete signals has to be guaranteed to arrive with a worst-case latency of 50ms. Finally video transmission should work with an average latency of around 100ms.
+Uniti has in turn set the requirements on our solution that it is supposed to
+work in an environment with at least 10000 people. Our transmission of discrete
+signals has to be guaranteed to arrive with a worst-case latency of 50ms.
+Finally video transmission should work with an average latency of around 100ms.
  
 
 %The goal of this thesis is to evaluate different mediums of wireless network
@@ -284,9 +293,26 @@ agreed upon resources that will be provided.
 	\item[Workstations] Stationary computers to work on.
 	\item[Laptop] Just like a stationary computer this will be used to produce
 		code on.
-	\item[Test platforms] There will be two test platforms available, one full
-		size and one small scale. The small scale test platform will run the same
-		ROS core on weaker hardware.
+	\item[Test platforms] Uniti provides two test platforms that will be available
+		during the course of the master thesis work. One full size test platform
+		(denoted as \texttt{Mule}) and one small size test platform (denoted as
+		\texttt{Robot})
+		\begin{itemize}
+			\item[\texttt{Robot}] The small size test platform. This will run the same
+				ROS-core as the real product on weaker hardware and will allways be
+				available for use by us, so no planning and coordination with the rest
+				of the team at Uniti is needed. Some parameters may need to be tweaked
+				before moving to full size testing, but the general functionallity will
+				not be affected by the size difference in our case.
+			\item[\texttt{Mule}] The full size test platform. This will run on
+				hardware that will be very similar or equal to the hardware that will be
+				present in the vehicle at the demo. The rest of the team at Uniti will
+				be working and testing on this platform during the course of the master
+				thesis work so some planning and coordination with the rest of the team
+				will be necessary to be able to perform the tests on the full size
+				model. This should however not be to much of a problem as most of the
+				testing can be done on the small size test platform.
+		\end{itemize}
 	\item[TOBY-L210] Long range radio module. 4G with 3G/2G fallback.
 	\item[EMMY-w163] Short range radio module. WiFi.
 	\item[EVK-L2x] Evaluation kit for TOBY-L2x
@@ -306,7 +332,9 @@ equipment.
 \bibliographystyle{plain}
 
 
-This Goal Document is approved by:
+This Goal Document is approved by:\\\\\\\\
+
+\signature{Uniti supervisor}{Kritofer Jansson}\\
 
 \signature{Main supervisor}{<name here>}\\
 
