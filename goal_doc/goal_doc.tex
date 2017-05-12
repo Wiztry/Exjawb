@@ -144,14 +144,21 @@ This solution is supposed to let the vehicle be both monitored and in worst case
 %Det borde vara mer direkt på vad vi ska göra här och vad vill vi uppnå
 %Vilka mål det finns att uppnå och dess begränsningar.
 
-The goal of this thesis is to evaluate different mediums of wireless network
-transmission to and from a unit in motion. This includes implementing a wireless
-connection between the unit and different peripheral devices. This work involves
-certain research into different network protocols and wireless technologies such
-as 4G or WiFi.
+The goal of the thesis will is to evaluate a couple of different mediums of wireless network transmission to and from Uniti's vehicle, as well as evaluating a couple of different protocols for sending both video data and more discrete signals as in Start or Stop.
 
-The focus of the work will be to find a solution which results in a long range
-transmission with minimal latency and a minimal rate of packet-loss.
+For our thesis we will be investigating the compatibility of setting up this connection both with 4G and WiFi Transmission. Furthermore we will also look into implementing both RTP and MMT for sending video data.
+
+Uniti has in turn set the requirements on our solution that it is supposed to work in an environment with at least 10000 people. Our transmission of discrete signals has to be guaranteed to arrive with a worst-case latency of 50ms. Finally video transmission should work with an average latency of around 100ms.
+ 
+
+%The goal of this thesis is to evaluate different mediums of wireless network
+%transmission to and from a unit in motion. This includes implementing a wireless
+%connection between the unit and different peripheral devices. This work involves
+%certain research into different network protocols and wireless technologies such
+%as 4G or WiFi.
+
+%The focus of the work will be to find a solution which results in a long range
+%transmission with minimal latency and a minimal rate of packet-loss.
 
 %The aim with this Master's thesis work is to research and implement a stable
 %connection between Uniti's car and peripheral devices such as a telephone or
@@ -275,26 +282,17 @@ agreed upon resources that will be provided.
 
 \begin{itemize}
 	\item[Workstations] Stationary computers to work on.
-	\item[Laptop] For use when we need to run tests that cannot be performed by
-		the desk on the small test platform.
-	\item[Test platforms] Two test platforms will be available during the course
-		of the master thesis work, a small scale test platform (denoted as Robot)
-		and a full scale test platform (denoted as Mule).
-		\begin{itemize}
-			\item[\texttt{Robot}] This is the smal scale test platform. This will be
-				available at all time, no planning and coordination with the rest of the
-				team at Uniti will be needed. This can even be used when tests on out of
-				office locations are to be performed.
-			\item[\texttt{Mule}] This is the full scale test platform. This will be
-				used by the rest of the development team of Uniti, and we will need to
-				plan and coordinate usage of this test platform with the rest of the
-				team at Uniti.
-		\end{itemize}
-	\item[\texttt{TOBY-L210}] Long range radio module. 4G with 3G/2G fallback.
-	\item[\texttt{EMMY-w163}] Short range radio module. WiFi.
-	\item[\texttt{EVK-L2x}] Evaluation kit for \texttt{TOBY-L2x}
-	\item[\texttt{EVK-EMMY-W1}] Evaluation kit for \texttt{EMMY-w1x}
-	\item[Source code] Current source code.
+	\item[Laptop] Just like a stationary computer this will be used to produce
+		code on.
+	\item[Test platforms] There will be two test platforms available, one full
+		size and one small scale. The small scale test platform will run the same
+		ROS core on weaker hardware.
+	\item[TOBY-L210] Long range radio module. 4G with 3G/2G fallback.
+	\item[EMMY-w163] Short range radio module. WiFi.
+	\item[EVK-L2x] Evaluation kit for TOBY-L2x
+	\item[EVK-EMMY-W1] Evaluation kit for EMMY-w1x
+	\item[source code] Current source code.
+
 \end{itemize}
 
 During our thesis work, we will work by integrating our ideas into Uniti's
@@ -308,9 +306,7 @@ equipment.
 \bibliographystyle{plain}
 
 
-This Goal Document is approved by:\\\\\\
-
-\signature{Uniti supervisor}{Kristofer Jansson}\\
+This Goal Document is approved by:
 
 \signature{Main supervisor}{<name here>}\\
 
