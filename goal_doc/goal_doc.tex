@@ -28,7 +28,10 @@
 
 \begin{document}
 \maketitle
+\thispagestyle{empty}
+
 \pagebreak
+\setcounter{page}{1}
 
 \begin{tabular}{lll}
 	\textbf{Students:} & Mattias Eklund & Carl Nilsson Nyman \\
@@ -265,11 +268,13 @@ respective specification.
 
 \begin{itemize}
 	\item[RTP] application layer protocol suited for streaming media.
+		\cite{spec_RTP}
 	\item[RTMP] is an extension that looks to improve on RTP in the areas that we
-		are interested in.
+		are interested in. \cite{spec_RTMP}
 	\item[MPTCP] improvent of TCP allowing for multiple ip-adresses and high
-		transfer rate.
+		transfer rate. \cite{spec_MPTCP}
 	\item[SCTP] protocol that ensures reliable, in sequence transport of messages.
+		\cite{spec_SCTP}
 \end{itemize}
 
 The work that we will be doing will be placed within a ROS node and integrated
