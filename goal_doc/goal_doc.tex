@@ -206,7 +206,7 @@ average latency of around 100ms.
 Our thesis project will be executed through a couple of steps.
 
 During the first stage we will work on a rough implementation of our connection
-using the rosbridge package, to communicate with the Robot Operating System
+using the rosbridge package to communicate with the Robot Operating System
 (ROS). ROS is the operating system which drives the core functionality of the 
 Vehicle. At this stage we will implement the remaining part of the connection
 using basic protocols over WiFi.
@@ -267,10 +267,10 @@ The protocols that are to be used have allready been specified in their
 respective specification.
 
 \begin{itemize}
-	\item[RTP] application layer protocol suited for streaming media.
+	\item[RTP] Real-time Transport Protocol has a history as one of the more popular protocols for media streaming. It is one of the most well-documented application layer protocols.
 		\cite{spec_RTP}
-	\item[RTMP] is an extension that looks to improve on RTP in the areas that we
-		are interested in. \cite{spec_RTMP}
+	\item[RTMP] is an extension on RTP that mainly improves on latency and has support on most plattforms. This protocol seems to specify itself in areas that are benificial to this project.
+		 \cite{spec_RTMP}
 	\item[MPTCP] improvent of TCP allowing for multiple ip-adresses and high
 		transfer rate. \cite{spec_MPTCP}
 	\item[SCTP] protocol that ensures reliable, in sequence transport of messages.
