@@ -267,13 +267,19 @@ The protocols that are to be used have allready been specified in their
 respective specification.
 
 \begin{itemize}
-	\item[RTP] Real-time Transport Protocol has a history as one of the more popular protocols for media streaming. It is one of the most well-documented application layer protocols.
+	\item[RTP] Real-time Transport Protocol has a history as one of the more
+		popular protocols for media streaming. It is one of the most well-documented
+		application layer protocols.
 		\cite{spec_RTP}
-	\item[RTMP] is an extension on RTP that mainly improves on latency and has support on most plattforms. This protocol seems to specify itself in areas that are benificial to this project.
+	\item[RTMP] An extension on RTP that mainly improves on latency and has
+		support on most plattforms. This protocol seems to specify itself in areas
+		that are benificial to this project.
 		 \cite{spec_RTMP}
-	\item[MPTCP] improvent of TCP allowing for multiple ip-adresses and high
-		transfer rate. \cite{spec_MPTCP}
-	\item[SCTP] protocol that ensures reliable, in sequence transport of messages.
+	\item[MPTCP] An experimental improvent of TCP allowing for multiple
+		ip-adresses and high transfer rate. This will be useful in the case where
+		WiFi and 4G connection is available. \cite{spec_MPTCP}
+	\item[SCTP] A protocol that is message based like UDP, and ensures reliable,
+		in-sequence transport of message with congestion control like TCP.
 		\cite{spec_SCTP}
 \end{itemize}
 
@@ -315,7 +321,7 @@ The outcome from this thesis work is made up of two parts, implementation and
 the test results.
 
 The implementation will be the final ROS node that we deem most suitable based
-on the test results..
+on the test results.
 
 The test-results from the different implementations of the connection between
 Uniti's vehicle and peripheral devices could be used as a basis for decisions
