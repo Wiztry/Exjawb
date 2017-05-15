@@ -151,8 +151,7 @@ in Start or Stop.
 
 For our thesis we will be investigating the compatibility of setting up this
 connection both with 4G and WiFi Transmission. Furthermore we will also look
-into implementing both Real-time Transport Protocol (RTP) and MPEG media
-transport (MMT) for sending video data. 
+into implementing both Real-time Transport Protocol (RTP) and Real-time Messaging Protocol (RTMP) for sending video data. 
 
 We will also look into implementing a connection for the discrete control
 signals using either Stream Control Transmission Protocol (SCTP) or Multipath
@@ -161,7 +160,7 @@ signals reach the vehicle within a desiered time. This results in eight cases
 that we are going to be investigate.
 
 Uniti has in turn set the requirements on our solution that it is supposed to
-work in an environment with at least 10000 people. Our transmission of discrete
+work in an environment with at least 10000 people and at most 20000. Our transmission of discrete
 signals has to be guaranteed to arrive with a worst-case latency of 50ms.
 Finally video transmission should work with an average latency of around 100ms.
  
@@ -198,21 +197,31 @@ Finally video transmission should work with an average latency of around 100ms.
 
 %Detta borde snarare handla om hur vi först gör detta och sedan gör detta.
 
-The majority of our thesis project will be put into implementing a wireless
-connection between Uniti's vehicle and a test platform which will help us
-evaluate our thesis.
+Our thesis project will be executed through a couple of steps.
 
-The first part of our thesis project will be put into implementing a connection
-with the platform which their vehicle uses (Robot operating system), which will
-be implemented through the use of the package rosbridge.
+During the first stage we will work on a rough implementation of our connection using the rosbridge package, to communicate with the Robot Operating System (ROS). ROS is the operating system which drives the core functionality of the Vehicle. At this stage we will implement the remaining part of the connection using basic protocols over WiFi.
 
-Beyond this we will be able to implement a connection from the vehicle to a test
-platform through more conventional means.
+The second stage of our project will be focused on making our implementation work using the different protocols specified. This will probably our most time-consuming stage as not all the protocols have native support for unix and rosbridge.
 
-Finally we will be able to substitute the different factors in our connection,
-such as medium and protocol, from the vehicle to the test platform with
-different mediums and protocols to test our thesis and in that achieve the goal
-we set.
+The third stage of our project is centered around making sure the connection works well over both the Wi-Fi Setup and the 4G Setup.
+
+The final stage is the evaluation step where we will use the larger test module to simulate heavy loads on the network to generate test data. The test data is then used to deduce which solution is best suited for the constraints set upon the project by Uniti.
+
+%The majority of our thesis project will be put into implementing a wireless
+%connection between Uniti's vehicle and a test platform which will help us
+%evaluate our thesis.
+
+%The first part of our thesis project will be put into implementing a connection
+%with the platform which their vehicle uses (Robot operating system), which will
+%be implemented through the use of the package rosbridge.
+
+%Beyond this we will be able to implement a connection from the vehicle to a test
+%platform through more conventional means.
+
+%Finally we will be able to substitute the different factors in our connection,
+%such as medium and protocol, from the vehicle to the test platform with
+%different mediums and protocols to test our thesis and in that achieve the goal
+%we set.
 
 %The thesis project will be based on the requirements set by the different parts
 %of the company Uniti's infrastructural software. This software is based
