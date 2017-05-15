@@ -137,6 +137,7 @@ This solution is supposed to let the vehicle be both monitored and in worst case
 %reliable enough to be used exclusively for this purpose? Reliable is in this
 %case refering to low latency and low package loss.
 %
+
 \section{Project aims and challenges}
 %The aim with this Master’s thesis work is to… To find a feasible solution to
 %these questions are challenging…
@@ -151,7 +152,8 @@ in Start or Stop.
 
 For our thesis we will be investigating the compatibility of setting up this
 connection both with 4G and WiFi Transmission. Furthermore we will also look
-into implementing both Real-time Transport Protocol (RTP) and Real-time Messaging Protocol (RTMP) for sending video data. 
+into implementing both Real-time Transport Protocol (RTP) and Real-time
+Messaging Protocol (RTMP) for sending video data. 
 
 We will also look into implementing a connection for the discrete control
 signals using either Stream Control Transmission Protocol (SCTP) or Multipath
@@ -160,9 +162,10 @@ signals reach the vehicle within a desiered time. This results in eight cases
 that we are going to be investigate.
 
 Uniti has in turn set the requirements on our solution that it is supposed to
-work in an environment with at least 10000 people and at most 20000. Our transmission of discrete
-signals has to be guaranteed to arrive with a worst-case latency of 50ms.
-Finally video transmission should work with an average latency of around 100ms.
+work in an environment with at least 10000 people and at most 20000. Our
+transmission of discrete signals has to be guaranteed to arrive with a
+worst-case latency of 50ms. Finally video transmission should work with an
+average latency of around 100ms.
  
 
 %The goal of this thesis is to evaluate different mediums of wireless network
@@ -199,13 +202,24 @@ Finally video transmission should work with an average latency of around 100ms.
 
 Our thesis project will be executed through a couple of steps.
 
-During the first stage we will work on a rough implementation of our connection using the rosbridge package, to communicate with the Robot Operating System (ROS). ROS is the operating system which drives the core functionality of the Vehicle. At this stage we will implement the remaining part of the connection using basic protocols over WiFi.
+During the first stage we will work on a rough implementation of our connection
+using the rosbridge package, to communicate with the Robot Operating System
+(ROS). ROS is the operating system which drives the core functionality of the 
+Vehicle. At this stage we will implement the remaining part of the connection
+using basic protocols over WiFi.
 
-The second stage of our project will be focused on making our implementation work using the different protocols specified. This will probably our most time-consuming stage as not all the protocols have native support for unix and rosbridge.
+The second stage of our project will be focused on making our implementation 
+work using the different protocols specified. This will probably be our most 
+time-consuming stage as not all the protocols have native support for Linux and
+rosbridge.
 
-The third stage of our project is centered around making sure the connection works well over both the Wi-Fi Setup and the 4G Setup.
+The third stage of our project is centered around making sure the connection 
+works well over both the Wi-Fi Setup and the 4G Setup.
 
-The final stage is the evaluation step where we will use the larger test module to simulate heavy loads on the network to generate test data. The test data is then used to deduce which solution is best suited for the constraints set upon the project by Uniti.
+The final stage is the evaluation step where we will use the larger test module
+to simulate heavy loads on the network to generate test data. The test data is
+then used to deduce which solution is best suited for the constraints set upon
+the project by Uniti.
 
 %The majority of our thesis project will be put into implementing a wireless
 %connection between Uniti's vehicle and a test platform which will help us
@@ -241,6 +255,28 @@ The final stage is the evaluation step where we will use the larger test module 
 %nog inte läsa artiklar djupare än att veta vad man kan ta ifrån dem.
 %Det är här t.ex. orimligt att använda Wi-Fi för att tänk på vad som händer när
 %man kör ifrån en accesspunkt
+
+The main field of this thesis is latency and response time and there are quite a
+lot of mechanisms and methods specifically for the measurement of both. These
+could be used in chain and used to calculate the latency of the video stream.
+
+The protocols that are to be used have allready been specified in their
+respective specification.
+
+\begin{itemize}
+	\item[RTP] application layer protocol suited for streaming media.
+	\item[RTMP] is an extension that looks to improve on RTP in the areas that we
+		are interested in.
+	\item[MPTCP] improvent of TCP allowing for multiple ip-adresses and high
+		transfer rate.
+	\item[SCTP] protocol that ensures reliable, in sequence transport of messages.
+\end{itemize}
+
+The work that we will be doing will be placed within a ROS node and integrated
+with Uniti's vehicle. As they have been working with ROS and ROS nodes they can
+supply direct help with installation and development issues. The ROS community
+is also quite active and should be able to provide support.
+
 
 %We have read an article \cite{NIST_report} concerning more general
 %internet security on both the link layer and application layer and
