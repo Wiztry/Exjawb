@@ -118,7 +118,13 @@ entire network.
 
 Uniti is a newly founded company that is developing an electric vehicle which will be driven autonomously.
 In a couple of months Uniti will showcase their advancements in their development,
-by hosting a demostrational event with their car in front of thousands of participants.
+by hosting a demostrational event with a live demo of their cars functional
+properties. Uniti estimates that around 5000 people are going to be attending
+this event. However, they want to make sure that the event works as planned even
+if 10000 people attend. Furthermore they estimates that roughly 10\% of the
+people attending the event will actively be using devices that can put any sort
+of load on the network.
+
 During this event the development of their car is not supposed to be finished, 
 but rather supposed to be far along enough to showcase its electric-only propulsion and autonomous features. 
 
@@ -129,6 +135,8 @@ applications but for some applications it could be critical to miss out on certa
 
 Uniti has expressed the need for a better solution for communicating with the vehicle.
 This solution is supposed to let the vehicle be both monitored and in worst case controlled via outside devices.
+
+
 
 %Using TCP will provide ordered and error-checked delivery of data, however, the
 %application might have to wait for retransmission of packages. This approach is
@@ -164,9 +172,11 @@ Transmission Control Protocol (MPTCP), to ensure that the time critical control
 signals reach the vehicle within a desiered time. This results in eight cases
 that we are going to be investigate.
 
-Uniti has in turn set the requirements on our solution that it is supposed to
-work in an environment with at least 10000 people and at most 20000. Our
-transmission of discrete signals has to be guaranteed to arrive with a
+Uniti have requested that the solution should work even if there are on avarage
+1000 active devices interfering with the network in proximity to the
+demo.
+
+Our transmission of discrete signals has to be guaranteed to arrive with a
 worst-case latency of 50ms. Finally video transmission should work with an
 average latency of around 100ms.
  
@@ -217,7 +227,13 @@ time-consuming stage as not all the protocols have native support for Linux and
 rosbridge.
 
 The third stage of our project is centered around making sure the connection 
-works well over both the Wi-Fi Setup and the 4G Setup.
+works well over both the Wi-Fi Setup and the 4G Setup. This will be done by
+performing several analysis tests. Where we will bring our test platform into
+environments where we can perform test over a long period of time to measure the
+load average depending on activity in the area. These environments will be
+places heavily populated by network activity, in the wifi case this can be a
+large office park i.e. Ideon, for LTE (4G) it will be places more populated by
+normal people, such as train stations or arenas.
 
 The final stage is the evaluation step where we will use the larger test module
 to simulate heavy loads on the network to generate test data. The test data is
@@ -330,6 +346,11 @@ The test-results from the different implementations of the connection between
 Uniti's vehicle and peripheral devices could be used as a basis for decisions
 regarding implementation of similar wireless application and which protocol
 and connection media that should be used.
+
+We will use the test results to extrapolate the more general characteristics of
+the different protocols and mediums under more severe loads. Then we will
+analyze what sets them apart at a lower level, to be able to more generally
+discuss which protocol and medium is more suited for specific tasks.
 
 % ---------------- END DRAFT --------------- %
 
