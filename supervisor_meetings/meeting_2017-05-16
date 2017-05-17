@@ -6,6 +6,8 @@ Prata med Björn om Examinator
 Definiera vad 10k pers innebär.
 	"mitt i malmö-belastningen."
 
+{10000 människor där runt 10% använder saker som på ett eller annat sätt stör nätverket}
+
 Vad finns det för möjlighet att experimentera
 
 Hitta 10k pers att testa mot.
@@ -17,11 +19,10 @@ de olika protokollen. fina kurvor and shite.
 
 Hitta en plats utan många publika accesspunkter, det hade vart bra för demon.
 
-Hitta en plats med många publika accesspunkter, det hade vart bra av en annan
-anledning.
+Hitta en plats med många publika accesspunkter, det hade vart bra för att göra tester.
 	Ideon
 
-Kolla vad det finns för färdigimplementerade protokoll
+Kolla vad det finns för något som är färdigimplementerat eller tidigare implementerat för de protokollen vi tänker använda.
 
 //Finns det möjlighet att simulera dessa i ns-3?
 
