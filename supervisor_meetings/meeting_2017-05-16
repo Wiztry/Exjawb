@@ -1,0 +1,37 @@
+Prata med Björn om Examinator
+	Kristian?
+
+%--%
+
+Definiera vad 10k pers innebär.
+	"mitt i malmö-belastningen."
+
+Vad finns det för möjlighet att experimentera
+
+Hitta 10k pers att testa mot.
+	Malmö central-station.
+	kontakta skånetrafiken
+
+Skriva att testa generella test för protokollen för att se karakteristiken för
+de olika protokollen. fina kurvor and shite.
+
+Hitta en plats utan många publika accesspunkter, det hade vart bra för demon.
+
+Hitta en plats med många publika accesspunkter, det hade vart bra av en annan
+anledning.
+	Ideon
+
+Kolla vad det finns för färdigimplementerade protokoll
+
+//Finns det möjlighet att simulera dessa i ns-3?
+
+Försöka konstruera ett scenario där vi kan garantera 50ms istället för att lita
+på LTE.
+
+VIKTIGA:
+	Hur ska vi gå till väga för att testa?
+		åka runt och mäta
+	Hur ska vi experimentera med det på den full skala?
+		gissa lite		
+
+möte fredag klockan 10.
