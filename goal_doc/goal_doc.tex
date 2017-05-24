@@ -173,15 +173,19 @@ streaming and the transmission of control signals such as Stop and Start.
 %% END SUBJEcT TO CHANGE
 
 
-For our thesis we will be investigating the compatibility of setting up this
-connection with both 4G and WiFi Transmission. Furthermore we will also look
-into implementing both Real-time Transport Protocol (RTP) and Real-time
-Messaging Protocol (RTMP) for sending video data. 
+For our thesis we will both be investigating the compatibility of setting up this
+connection with both 4G and WiFi Transmission aswell as with four different protocols
+focused on either streaming video or transmitting discrete signals.
 
-We will also look into implementing a connection for the discrete control
-signals using either Stream Control Transmission Protocol (SCTP) or Multipath
-Transmission Control Protocol (MPTCP), to ensure that the time critical control
-signals reach the vehicle within a desiered time. This results in eight cases
+For streaming video we will test both the Real-Time Transport Protocol (RTP)
+and Real-time Messaging Protocol (RTMP). For sending discrete control signals we will
+work with Stream Control Transmission Protocol (SCTP) and Multipath Transmission
+Control Protocol (MPTCP).
+
+The different protocols will be tested through using readily available implementations
+and integrating them with Rosbridge.
+
+This results in eight cases
 that we are going to investigate.
 
 Uniti have requested that the solution should work even if there are on avarage
