@@ -158,10 +158,11 @@ This solution is supposed to let the vehicle be both monitored and in worst case
 
 
 %% Förslag på förändring
-The goal of the thesis is to evaluate 4G and WiFi connection in combination with
-a selection of protocols for handling the communication between Uniti's vehicle
-and external devices. This connection should be able to handle both media
-streaming and the transmission of control signals such as Stop and Start.
+The goal of the thesis is to evaluate the connection using 4G and WiFi in
+combination with a selection of protocols for handling the communication between
+Uniti's vehicle and external devices. This connection should be able to handle
+both media streaming and the transmission of control signals such as Stop and
+Start.
 %% END FORSLAG %%
 
 
@@ -174,7 +175,7 @@ streaming and the transmission of control signals such as Stop and Start.
 
 
 For our thesis we will be investigating the compatibility of setting up this
-connection with both 4G and WiFi Transmission as well as with four different protocols
+connection with both 4G and WiFi as well as with four different protocols
 focused on either streaming video or transmitting discrete signals.
 
 For streaming video we will test both the Real-Time Transport Protocol (RTP)
@@ -185,8 +186,7 @@ Control Protocol (MPTCP).
 The different protocols will be tested through using readily available implementations
 and integrating them with Rosbridge.
 
-This results in eight cases
-that we are going to investigate.
+This results in eight cases that we are going to investigate.
 
 Uniti have requested that the solution should work even if there are on avarage
 1000 active devices interfering with the network in proximity to the
@@ -195,7 +195,7 @@ demo.
 Our transmission of discrete signals has to be guaranteed to arrive with a
 worst-case latency of 50ms. Finally video transmission should work with an
 average latency of around 100ms.
- 
+
 
 %The goal of this thesis is to evaluate different mediums of wireless network
 %transmission to and from a unit in motion. This includes implementing a wireless
@@ -230,32 +230,37 @@ average latency of around 100ms.
 %Detta borde snarare handla om hur vi först gör detta och sedan gör detta.
 
 Our thesis project will be executed through a couple of stages.
+\begin{enumerate}
+	\item
+		During the first stage we will work on a rough implementation of our connection
+		using the Rosbridge package to communicate with the Robot Operating System
+		(ROS). ROS is the operating system which drives the core functionality of the 
+		Vehicle. At this stage we will implement the remaining part of the connection
+		using basic protocols over WiFi.
 
-During the first stage we will work on a rough implementation of our connection
-using the rosbridge package to communicate with the Robot Operating System
-(ROS). ROS is the operating system which drives the core functionality of the 
-Vehicle. At this stage we will implement the remaining part of the connection
-using basic protocols over WiFi.
+	\item
+		The second stage of our project will be focused on making our implementation 
+		work using the different protocols specified. This will probably be our most 
+		time-consuming stage as not all the protocols have native support for Linux and
+		rosbridge.
 
-The second stage of our project will be focused on making our implementation 
-work using the different protocols specified. This will probably be our most 
-time-consuming stage as not all the protocols have native support for Linux and
-rosbridge.
+	\item
+		The third stage of our project is centered around making sure the connection 
+		works well over both the Wi-Fi Setup and the 4G Setup. This will be done by
+		performing several stability tests. Where we will bring our test platform into
+		environments where we can test over a long period of time. This will allow us to
+		measure how the performance of the proposed protocols depend on the load on the
+		wireless networks in the test area. These environments will be places heavily
+		populated by network activity, in the Wi-Fi case this can be a large office park
+		i.e. Ideon, for LTE (4G) it will be places more populated by people, such as
+		train stations or arenas.
 
-The third stage of our project is centered around making sure the connection 
-works well over both the Wi-Fi Setup and the 4G Setup. This will be done by
-performing several analysis tests. Where we will bring our test platform into
-environments where we can test over a long period of time to measure 
-how the performance of the proposed protocols depend on the load on the wireless
-networks in the test area. These environments will be
-places heavily populated by network activity, in the Wi-Fi case this can be a
-large office park i.e. Ideon, for LTE (4G) it will be places more populated by
-people, such as train stations or arenas.
+	\item
+		The final stage will consist of evaluating the results from the third stage to
+		deduce which solution is best suited for the task with the constraints imposed
+		on it by Uniti.
 
-The final stage is the evaluation step where we will use the larger test module
-to simulate heavy loads on the network to generate test data. The test data is
-then used to deduce which solution is best suited for the constraints set upon
-the project by Uniti.
+\end{enumerate}
 
 %The majority of our thesis project will be put into implementing a wireless
 %connection between Uniti's vehicle and a test platform which will help us
