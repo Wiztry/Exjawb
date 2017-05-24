@@ -117,7 +117,7 @@ entire network.
 %as a tablet or laptop.
 
 Uniti is a newly founded company that is developing an electric vehicle which will be driven autonomously.
-In a couple of months Uniti will showcase their advancements in their development,
+In a couple of months Uniti will showcase the advancements in their development,
 by hosting a demostrational event with a live demo of their cars functional
 properties. Uniti estimates that around 5000 people are going to be attending
 this event. However, they want to make sure that the event works as planned even
@@ -129,7 +129,7 @@ During this event the development of their car is not supposed to be finished,
 but rather supposed to be far along enough to showcase its electric-only propulsion and autonomous features. 
 
 Today Uniti uses a UDP stream for communication between the vehicle and
-peripheral devices, this is not really ideal as UDP-applications most likely
+external devices, this is not really ideal as UDP-applications most likely
 suffer from package-loss, errors, or duplication. This is fine for some
 applications but for some applications it could be critical to miss out on certain information. Furthermore it is also desireable to use a protocol which is designed with, the application of the data which is transferred, in mind.
 
@@ -156,13 +156,25 @@ This solution is supposed to let the vehicle be both monitored and in worst case
 %Det borde vara mer direkt på vad vi ska göra här och vad vill vi uppnå
 %Vilka mål det finns att uppnå och dess begränsningar.
 
-The goal of the thesis is to evaluate a couple of different mediums of wireless
-network transmission to and from Uniti's vehicle, as well as evaluating a couple
-of different protocols for sending both video data and more discrete signals as
-in Start or Stop.
+
+%% Förslag på förändring
+The goal of the thesis is to evaluate 4G and WiFi connection in combination with
+a selection of protocols for handling the communication between Uniti's vehicle
+and external devices. This connection should be able to handle both media
+streaming and the transmission of control signals such as Stop and Start.
+%% END FORSLAG %%
+
+
+%% SUBJECT TO CHANGE
+%The goal of the thesis is to evaluate a couple of different mediums of wireless
+%network transmission to and from Uniti's vehicle, as well as evaluating a couple
+%of different protocols for sending both video data and more discrete signals as
+%in Start or Stop.
+%% END SUBJEcT TO CHANGE
+
 
 For our thesis we will be investigating the compatibility of setting up this
-connection both with 4G and WiFi Transmission. Furthermore we will also look
+connection with both 4G and WiFi Transmission. Furthermore we will also look
 into implementing both Real-time Transport Protocol (RTP) and Real-time
 Messaging Protocol (RTMP) for sending video data. 
 
@@ -170,7 +182,7 @@ We will also look into implementing a connection for the discrete control
 signals using either Stream Control Transmission Protocol (SCTP) or Multipath
 Transmission Control Protocol (MPTCP), to ensure that the time critical control
 signals reach the vehicle within a desiered time. This results in eight cases
-that we are going to be investigate.
+that we are going to investigate.
 
 Uniti have requested that the solution should work even if there are on avarage
 1000 active devices interfering with the network in proximity to the
@@ -213,7 +225,7 @@ average latency of around 100ms.
 
 %Detta borde snarare handla om hur vi först gör detta och sedan gör detta.
 
-Our thesis project will be executed through a couple of steps.
+Our thesis project will be executed through a couple of stages.
 
 During the first stage we will work on a rough implementation of our connection
 using the rosbridge package to communicate with the Robot Operating System
@@ -229,11 +241,12 @@ rosbridge.
 The third stage of our project is centered around making sure the connection 
 works well over both the Wi-Fi Setup and the 4G Setup. This will be done by
 performing several analysis tests. Where we will bring our test platform into
-environments where we can perform test over a long period of time to measure the
-load average depending on activity in the area. These environments will be
-places heavily populated by network activity, in the wifi case this can be a
+environments where we can test over a long period of time to measure 
+how the performance of the proposed protocols depend on the load on the wireless
+networks in the test area. These environments will be
+places heavily populated by network activity, in the Wi-Fi case this can be a
 large office park i.e. Ideon, for LTE (4G) it will be places more populated by
-normal people, such as train stations or arenas.
+people, such as train stations or arenas.
 
 The final stage is the evaluation step where we will use the larger test module
 to simulate heavy loads on the network to generate test data. The test data is
@@ -280,7 +293,7 @@ lot of mechanisms and methods specifically for the measurement of both. These
 could be used in chain and used to calculate the latency of the video stream.
 
 The protocols that are to be used have allready been specified in their
-respective specification.
+respective standards.
 
 \subsubsection*{RTP: Real-time Transport Protocol}	
 Real-time Transport Protocol has a history as one of the more popular protocols
@@ -343,7 +356,7 @@ The implementation will be the final ROS node that we deem most suitable based
 on the test results.
 
 The test-results from the different implementations of the connection between
-Uniti's vehicle and peripheral devices could be used as a basis for decisions
+Uniti's vehicle and external devices could be used as a basis for decisions
 regarding implementation of similar wireless application and which protocol
 and connection media that should be used.
 
