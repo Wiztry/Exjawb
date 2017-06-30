@@ -1,0 +1,3 @@
+Vi spenderade veckan med att joxa i C++ och kolla på hur implementerar jrtplib.
+
+Server client implementationen fungerade någorlunda fast endast för TCP och UDP vilket inte är protokoll vi ska använda

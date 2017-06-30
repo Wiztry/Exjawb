@@ -1,0 +1,3 @@
+Vi började implementera mer server client och dokumentera kod.
+
+Började kolla på RTP paket och libs.

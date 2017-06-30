@@ -1,0 +1,5 @@
+Första veckan på uniti
+
+Vi spenderade flera dagar på att sätta oss in i deras system och testa saker som Trello
+
+I slutet av veckan börjades bygge på någon basic C++ implementation av server-client

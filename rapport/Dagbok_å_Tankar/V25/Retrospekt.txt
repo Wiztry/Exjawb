@@ -1,0 +1,4 @@
+Denna veckan fick vi våra moduler från uBlox. Out of the box så var det svårt att använda dem då deras drivers inte funkade på Linux.
+
+Vi joxade vidare med och lösa andra protokoll. Började implementera SCTP och försökte använda en färdig implementation av RTMP i ramverket Nginx.
+

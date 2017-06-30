@@ -1,0 +1,10 @@
+Mån: Fick RTMP att lira i Nginx, men delayen mellan inspelning från en webcam till visning är över 5sec och kan i bästa fall tryckas ned med ett par sekunder igenom att inte buffra, det tillför dock problem att inte buffra.
+Ifall man kör RTMP i Nginx med en redan inspelad fil och inte buffrar kan man komma ned till 400ms, men det är fortfarande för lite. 
+
+Tis: Efter mer testning har vi kommit fram till att vi inte kan använda Nginx.
+
+Ons: SCTP funkar nu och skickar strängar fram och tillbaka med bara några ms på lokalt nätverk. Jobbet med att få modulerna att fungera går sakta framåt, börjat försöka prata med dem i windows.
+
+Tor: LTE modulen fungerar numera i Windows och man kan surfa via den. Nu ska det bara lösas i windows
+
+Fre: Infrastruktur för rapportskrivning och dagboksföring är nu satt upp.
